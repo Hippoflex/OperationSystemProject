@@ -6,8 +6,8 @@ namespace OperationSystemProject
 {
     class PhysicalMemory
     {
-        protected List<string> frameList = new List<string>();
-        protected int currentSize;
-        protected int maxSize;
+        protected List<Frame>   frameList;
+        protected int           currentSize;
+        protected int           maxSize;
     }
 }

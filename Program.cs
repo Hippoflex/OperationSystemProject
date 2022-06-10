@@ -17,7 +17,15 @@ namespace OperationSystemProject
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Model model = new Model();
+            Form1 view = new Form1();
+            
+            Controller controller = new Controller();
+            controller.Attach(view);
+            controller.Attach(model);
+
+            Application.Run(view);
         }
     }
 }

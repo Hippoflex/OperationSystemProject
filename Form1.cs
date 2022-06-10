@@ -12,6 +12,10 @@ namespace OperationSystemProject
 {
     public partial class Form1 : Form
     {
+        private Controller  controller;
+        private Model       model;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -19,8 +23,18 @@ namespace OperationSystemProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            controller.StartTimer();
         }
-       
+
+
+        public void Attach(Controller controller_)
+        {
+            controller = controller_;
+        }
+
+        public void Attach(Model model_)
+        {
+            model = model_;
+        }
     }
 }
