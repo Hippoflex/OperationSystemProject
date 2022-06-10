@@ -1,0 +1,15 @@
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.exe
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.deps.json
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.runtimeconfig.json
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.runtimeconfig.dev.json
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.dll
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\bin\Debug\netcoreapp3.1\OperationSystemProject.pdb
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.csprojAssemblyReference.cache
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.Form1.resources
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.csproj.GenerateResource.cache
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.AssemblyInfoInputs.cache
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.AssemblyInfo.cs
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.csproj.CoreCompileInputs.cache
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.dll
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.pdb
+C:\Users\Yury\source\repos\OperationSystemProject\OperationSystemProject\obj\Debug\netcoreapp3.1\OperationSystemProject.genruntimeconfig.cache
