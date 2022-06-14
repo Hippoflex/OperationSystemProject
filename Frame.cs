@@ -4,9 +4,29 @@ using System.Text;
 
 namespace OperationSystemProject
 {
-    class Frame
+    public class Frame
     {
-        private int id;
-        private int type;
+        private static int  ID = 0;
+        private int         id;
+        private int         type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
+
+        public Frame()
+        {
+            id = ID++;
+        }
+        
+
+        
+        public int GetID()
+        {
+            return id;
+        }
+
+
     }
 }

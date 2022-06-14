@@ -8,7 +8,7 @@ namespace OperationSystemProject
     public class Model
     {
         private List<Frame>     listTable;
-        private List<Proccess>  processList;
+        private List<Process>  processList;
         private Ram             ram;
         private ExternalMemory  externalMemory;
         private Form1           view;
@@ -30,7 +30,7 @@ namespace OperationSystemProject
             /**
              * TO DO
              */
-            Proccess proccess = new Proccess();
+            Process proccess = new Process();
             processList.Add(proccess);
         }
 
