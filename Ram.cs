@@ -6,6 +6,9 @@ namespace OperationSystemProject
 {
     class Ram : PhysicalMemory
     {
-        
+        public Ram() : base(10)
+        {
+
+        }
     }
 }
