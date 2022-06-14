@@ -8,10 +8,18 @@ namespace OperationSystemProject
     public class Model
     {
         private List<Frame>     listTable;
-        private List<Process>  processList;
+        private List<Process>   processList;
         private Ram             ram;
         private ExternalMemory  externalMemory;
         private Form1           view;
+
+
+
+        public Model()
+        {
+            listTable = new List<Frame>();
+            processList = new List<Process>();
+        }
 
 
         /**
@@ -32,6 +40,8 @@ namespace OperationSystemProject
              */
             Process proccess = new Process();
             processList.Add(proccess);
+
+            view.UpdateProcess();
         }
 
 
@@ -43,6 +53,18 @@ namespace OperationSystemProject
             /*
                 TO DO
             */    
+        }
+
+
+        public Process GetProcess(int index)
+        {
+            return processList[index];
+        }
+
+
+        public int GetQuantity()
+        {
+            return processList.Count;
         }
     }
 

@@ -20,6 +20,9 @@ namespace OperationSystemProject
             view = view_;
             view.Attach(this);
             view.Attach(model);
+
+            if (model != null)
+                model.Attach(view);
         }
 
 
@@ -29,6 +32,10 @@ namespace OperationSystemProject
         public void Attach(Model model_)
         {
             model = model_;
+            model.Attach(view);
+
+            if (view != null)
+                view.Attach(model);
         }
 
         /**
@@ -39,6 +46,14 @@ namespace OperationSystemProject
             timer.Start();
             timer.Elapsed += new ElapsedEventHandler(model.Update);
             timer.Interval = 500;
+        }
+
+        public void Generate(int size)
+        {
+            for (int i = 0; i < size; ++i)
+            {
+                model.GenerateProcess();
+            }
         }
     }
 }

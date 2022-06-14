@@ -19,6 +19,12 @@ namespace OperationSystemProject
             id = NextID();
         }
 
+
+        public int GetID()
+        {
+            return id;
+        }
+
         /**
          * Добавить фрейм
          **/

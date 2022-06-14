@@ -18,11 +18,17 @@ namespace OperationSystemProject
 
         public Form1()
         {
+            
             InitializeComponent();
+
+            dataGridView1.Columns.Add("Process", "Process ID");
+            dataGridView2.Columns.Add("Frame", "Frame ID");
+            dataGridView3.Columns.Add("Frame", "Frame ID");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            controller.Generate(((int)numericUpDown1.Value));
             controller.StartTimer();
         }
 
@@ -35,6 +41,19 @@ namespace OperationSystemProject
         public void Attach(Model model_)
         {
             model = model_;
+        }
+
+
+        public void UpdateProcess()
+        {
+            int quantity = model.GetQuantity();
+
+            for (int i = 0; i < quantity; ++i)
+            {
+                var process = model.GetProcess(i);
+                dataGridView1.Rows.Add(1);
+                dataGridView1.Rows[i].Cells[0].Value = process.GetID().ToString();
+            }
         }
     }
 }
