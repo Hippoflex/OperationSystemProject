@@ -6,9 +6,33 @@ namespace OperationSystemProject
 {
     class ExternalMemory : PhysicalMemory
     {
-        public ExternalMemory() : base(10)
+        private List<Frame> frames;
+
+        public ExternalMemory()
         {
             
+        }
+
+
+        public override void Attach(Frame frame)
+        {
+            frames.Add(frame);
+        }
+
+        public override void Dettach(Frame frame)
+        {
+            frames.Remove(frame);
+        }
+
+
+        public override Frame GetFrame(int index)
+        {
+            return frames[index];
+        }
+
+        public override int GetSize()
+        {
+            return frames.Count;
         }
     }
 }

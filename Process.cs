@@ -17,6 +17,7 @@ namespace OperationSystemProject
         public Process()
         {
             id = NextID();
+            frameList = new List<Frame>();
         }
 
 

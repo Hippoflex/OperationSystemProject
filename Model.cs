@@ -11,13 +11,14 @@ namespace OperationSystemProject
         private List<Process>   processList;
         private Ram             ram;
         private ExternalMemory  externalMemory;
+
         private Form1           view;
 
 
 
         public Model()
         {
-            listTable = new List<Frame>();
+            ram = new Ram(5);
             processList = new List<Process>();
         }
 
@@ -35,13 +36,17 @@ namespace OperationSystemProject
          **/
         public void GenerateProcess()
         {
-            /**
-             * TO DO
-             */
             Process proccess = new Process();
             processList.Add(proccess);
 
-            view.UpdateProcess();
+
+            Random rnd = new Random();
+            int frameQuantity =  rnd.Next(3, 6);
+            
+            for (int i = 0; i < frameQuantity; ++i)
+                proccess.Add(new Frame());
+            
+            view.UpdateProcessModel(0, processList.Count);
         }
 
 
@@ -65,6 +70,16 @@ namespace OperationSystemProject
         public int GetQuantity()
         {
             return processList.Count;
+        }
+
+        public Frame GetRamFrame(int index)
+        {
+            return ram.GetFrame(index);
+        }
+
+        public Frame GetEMFrame(int index)
+        {
+            return ram.GetFrame(index);
         }
     }
 
