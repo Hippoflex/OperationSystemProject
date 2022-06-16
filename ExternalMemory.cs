@@ -10,7 +10,7 @@ namespace OperationSystemProject
 
         public ExternalMemory()
         {
-            
+            frames = new List<Frame>();
         }
 
 

@@ -62,8 +62,20 @@ namespace OperationSystemProject
                 return;
 
 
-            
-            
+            view.SelectedProccess(currentProcess);
+            view.SelecetedFrame(currentFrame);
+            currentFrame++;
+
+            // переход к следующему процессу
+            if (currentFrame == processList[currentProcess].Quantity())
+            {
+                ++currentProcess;
+                currentFrame = 0;
+            }
+
+
+            ram.Attach(processList[currentProcess].GetFrame(currentFrame));
+
 
             view.UpdateExternalMemoryModel(0, externalMemory.GetSize());
             view.UpdateRAMModel(0, ram.GetSize());

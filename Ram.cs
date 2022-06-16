@@ -11,6 +11,7 @@ namespace OperationSystemProject
 
         public Ram(int size)
         {
+            frames = new Queue<Frame>();
             maxSize = size;
         }
 
