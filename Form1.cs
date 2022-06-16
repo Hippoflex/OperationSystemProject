@@ -107,5 +107,16 @@ namespace OperationSystemProject
                 dataGridView3.Rows[i].Cells[0].Value = frame.GetID();
             }
         }
+
+
+        public void ClearExternalMemmory()
+        {
+            dataGridView3.Rows.Clear();
+        }
+
+        public void ClearRAM()
+        {
+            dataGridView2.Rows.Clear();
+        }
     }
 }

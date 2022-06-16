@@ -11,14 +11,17 @@ namespace OperationSystemProject
         private List<Process>   processList;
         private Ram             ram;
         private ExternalMemory  externalMemory;
-
         private Form1           view;
+
+        private int currentProcess = 0;
+        private int currentFrame = 0;
 
 
 
         public Model()
         {
             ram = new Ram(5);
+            externalMemory = new ExternalMemory();
             processList = new List<Process>();
         }
 
@@ -55,9 +58,15 @@ namespace OperationSystemProject
          **/
         public void Update(object source, ElapsedEventArgs e)
         {
-            /*
-                TO DO
-            */    
+            if (currentProcess >= processList.Count)
+                return;
+
+
+            
+            
+
+            view.UpdateExternalMemoryModel(0, externalMemory.GetSize());
+            view.UpdateRAMModel(0, ram.GetSize());
         }
 
 
