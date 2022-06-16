@@ -23,6 +23,8 @@ namespace OperationSystemProject
             ram = new Ram(5);
             externalMemory = new ExternalMemory();
             processList = new List<Process>();
+
+            ram.em = externalMemory;
         }
 
 
@@ -62,10 +64,11 @@ namespace OperationSystemProject
                 return;
 
 
+            ram.Attach(processList[currentProcess].GetFrame(currentFrame));
+            
             view.SelectedProccess(currentProcess);
-            view.SelecetedFrame(currentFrame);
-            currentFrame++;
 
+            currentFrame++;
             // переход к следующему процессу
             if (currentFrame == processList[currentProcess].Quantity())
             {
@@ -73,12 +76,8 @@ namespace OperationSystemProject
                 currentFrame = 0;
             }
 
-
-            ram.Attach(processList[currentProcess].GetFrame(currentFrame));
-
-
-            view.UpdateExternalMemoryModel(0, externalMemory.GetSize());
             view.UpdateRAMModel(0, ram.GetSize());
+            view.UpdateExternalMemoryModel(0, externalMemory.GetSize());
         }
 
 
@@ -100,7 +99,7 @@ namespace OperationSystemProject
 
         public Frame GetEMFrame(int index)
         {
-            return ram.GetFrame(index);
+            return externalMemory.GetFrame(index);
         }
     }
 

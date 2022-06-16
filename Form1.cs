@@ -32,6 +32,8 @@ namespace OperationSystemProject
             dataGridView3.Columns.Add("Frame", "Frame ID");
 
             dataGridView1.Rows.Add(1);
+            dataGridView2.Rows.Add(1);
+            dataGridView3.Rows.Add(1);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -79,7 +81,7 @@ namespace OperationSystemProject
 
         public void SelectedProccess(int index)
         {
-            dataGridView1.Update();
+            //dataGridView1.Update();
             dataGridView1.Rows[index].Cells[0].Style.BackColor = Color.Orange;
             dataGridView1.Rows[index].Cells[1].Style.BackColor = Color.Orange;
             dataGridView1.Rows[index].Cells[2].Style.BackColor = Color.Orange;
@@ -90,7 +92,7 @@ namespace OperationSystemProject
 
         public void SelecetedFrame(int index)
         {
-            dataGridView2.Update();
+            //dataGridView2.Update();
             dataGridView2.Rows[index].Cells[0].Style.BackColor = Color.Aqua;           
         }
 
@@ -102,7 +104,7 @@ namespace OperationSystemProject
 
         public void UpdateRAMModel(int start, int end)
         {
-            for (int i = start; start < end; ++i)
+            for (int i = start; i < end; ++i)
             {
                 var frame = model.GetRamFrame(i);
 
@@ -118,7 +120,7 @@ namespace OperationSystemProject
 
         public void UpdateExternalMemoryModel(int start, int end)
         {
-            for (int i = start; start < end; ++i)
+            for (int i = start; i < end; ++i)
             {
                 var frame = model.GetEMFrame(i);
 
@@ -129,17 +131,6 @@ namespace OperationSystemProject
 
                 dataGridView3.Rows[i].Cells[0].Value = frame.GetID();
             }
-        }
-
-
-        public void ClearExternalMemmory()
-        {
-            dataGridView3.Rows.Clear();
-        }
-
-        public void ClearRAM()
-        {
-            dataGridView2.Rows.Clear();
         }
     }
 }

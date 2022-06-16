@@ -8,6 +8,7 @@ namespace OperationSystemProject
     {
         private Queue<Frame> frames;
         private int maxSize;
+        public ExternalMemory em;
 
         public Ram(int size)
         {
@@ -17,7 +18,23 @@ namespace OperationSystemProject
 
         public override void Attach(Frame item)
         {
-            frames.Enqueue(item);
+            bool containFrame = false;
+            foreach (var frame in frames)
+            {
+                if (frame.GetID() == item.GetID())
+                {
+                    containFrame = true;
+                }
+            }
+
+            if (!containFrame && frames.Count < maxSize)
+            {
+                frames.Enqueue(item);
+            } else if (!containFrame)
+            {
+                em.Attach(frames.Dequeue());
+                frames.Enqueue(item);
+            }
         }
 
 
