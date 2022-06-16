@@ -90,12 +90,14 @@ namespace OperationSystemProject
 
         public void SelecetedFrame(int index)
         {
-            dataGridView1.Rows[index].Cells[0].Style.BackColor = Color.Aqua;           
+            dataGridView2.Update();
+            dataGridView2.Rows[index].Cells[0].Style.BackColor = Color.Aqua;           
         }
 
         public void SelectedEXMemory(int index)
         {
-            dataGridView1.Rows[index].Cells[0].Style.BackColor = Color.Aquamarine;
+            dataGridView3.Update();
+            dataGridView3.Rows[index].Cells[0].Style.BackColor = Color.Aquamarine;
         }
 
         public void UpdateRAMModel(int start, int end)
