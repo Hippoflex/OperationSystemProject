@@ -10,9 +10,7 @@ namespace OperationSystemProject
 
         public abstract void Attach(Frame frame);
 
-
         public abstract void Dettach(Frame frame);
-
 
         public abstract Frame GetFrame(int index);
     }

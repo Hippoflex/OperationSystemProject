@@ -64,6 +64,7 @@ namespace OperationSystemProject
                 }
                     
                 dataGridView1.Rows[i].Cells[0].Value = process.GetID().ToString();
+                
 
                 // вывод фреймов
                 int quantity = process.Quantity();
@@ -76,6 +77,28 @@ namespace OperationSystemProject
             }
         }
 
+        public void SelectedProccess(int index)
+        {
+            dataGridView1.Update();
+            dataGridView1.Rows[index].Cells[0].Style.BackColor = Color.Orange;
+            dataGridView1.Rows[index].Cells[1].Style.BackColor = Color.Orange;
+            dataGridView1.Rows[index].Cells[2].Style.BackColor = Color.Orange;
+            dataGridView1.Rows[index].Cells[3].Style.BackColor = Color.Orange;
+            dataGridView1.Rows[index].Cells[4].Style.BackColor = Color.Orange;
+            dataGridView1.Rows[index].Cells[5].Style.BackColor = Color.Orange;
+        }
+
+        public void SelecetedFrame(int index)
+        {
+            dataGridView2.Update();
+            dataGridView2.Rows[index].Cells[0].Style.BackColor = Color.Aqua;           
+        }
+
+        public void SelectedEXMemory(int index)
+        {
+            dataGridView3.Update();
+            dataGridView3.Rows[index].Cells[0].Style.BackColor = Color.Aquamarine;
+        }
 
         public void UpdateRAMModel(int start, int end)
         {

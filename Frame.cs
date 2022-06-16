@@ -6,7 +6,6 @@ namespace OperationSystemProject
 {
     public class Frame
     {
-        private static int  ID = 0;
         private int         id;
         private int         type
         {
@@ -17,7 +16,9 @@ namespace OperationSystemProject
 
         public Frame()
         {
-            id = ID++;
+            Random rnd = new Random();
+            int idRnd = rnd.Next(0, 10);
+            id = idRnd;
         }
         
 
